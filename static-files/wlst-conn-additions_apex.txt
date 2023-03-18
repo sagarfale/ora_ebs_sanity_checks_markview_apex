@@ -1,0 +1,8 @@
+connect('weblogic_admin_user','weblogic_admin_pass','url')
+servers=cmo.getServers()
+print "-------------------------------------------------------"
+print "\t"+cmo.getName()+" domain status"
+print "-------------------------------------------------------"
+for server in servers:
+        state(server.getName(),server.getType())
+print "-------------------------------------------------------"

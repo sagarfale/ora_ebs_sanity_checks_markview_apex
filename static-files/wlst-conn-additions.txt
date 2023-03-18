@@ -1,0 +1,9 @@
+connect(adminUsername,adminPassword,adminURL)
+domainRuntime()
+cd('ServerRuntimes')
+servers=domainRuntimeService.getServerRuntimes()
+for server in servers:
+        currenthost = server.getListenAddress()
+        currentState = server.getHealthState()
+        print currenthost,currentState
+exit()
